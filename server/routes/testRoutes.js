@@ -1,20 +1,5 @@
 const { query } = require("../models/db");
 
-// Mock request and response objects
-// const mockReq = {
-//   body: {
-//     key1: "value1",
-//     key2: "value2",
-//   },
-// };
-
-// const mockRes = {
-//   status: (code) => ({
-//     json: (data) => console.log("Response:", code, data),
-//   }),
-// };
-
-//get tests
 const getTests = async (req, res) => {
   try {
     const result = await query("select * from tests");
