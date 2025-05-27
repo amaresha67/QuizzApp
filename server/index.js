@@ -33,12 +33,12 @@ app.use(express.json());
 
 app.post("/api/principal/login", getPrincipalData);
 
-app.post("/api/students", verifyToken, insertStudentData);
+app.post("/api/students",  insertStudentData);
 app.post("/api/students/login", getStudentData);
 app.get("/api/students/pending", verifyToken, getStudentsPendingToAllow);
 app.post("/api/student/updateAllow", verifyToken, updateStudentAllow);
 
-app.post("/api/teachers", verifyToken, insertTeacherData);
+app.post("/api/teachers", insertTeacherData);
 app.post("/api/teachers/login", getTeacherData);
 app.get("/api/teachers/pending", verifyToken, getTeachersPendingToAllow);
 app.post("/api/teachers/updateAllow", verifyToken, updateTeacherAllow);
