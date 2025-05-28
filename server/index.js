@@ -43,7 +43,7 @@ app.post("/api/teachers/login", getTeacherData);
 app.get("/api/teachers/pending", verifyToken, getTeachersPendingToAllow);
 app.post("/api/teachers/updateAllow", verifyToken, updateTeacherAllow);
 
-app.post("/api/tests/addTest", addTest);
+app.post("/api/tests/addTest", verifyToken,addTest);
 app.delete("/api/tests/deleteTest/:test_id", verifyToken, deleteTest);
 app.post("/api/tests/updateTest/:test_id", verifyToken, updateTest);
 app.get("/api/tests/getTest/:test_id", verifyToken, getTest);
