@@ -151,7 +151,7 @@ const addTest = async (req, res) => {
       ]);
 
       await query(
-        `INSERT INTO QuestionAnswers 
+        `INSERT INTO questionanswers 
      (test_id, question, option_1, option_2, option_3, option_4, answer) 
      VALUES ${questionValues.map(() => "(?, ?, ?, ?, ?, ?, ?)").join(", ")}`,
         questionValues.flat()
