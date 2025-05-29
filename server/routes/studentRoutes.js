@@ -85,7 +85,7 @@ const insertStudentData = async (req, res) => {
   );
   try {
     const result = await query(
-      "INSERT INTO Students (roll_number,first_name,last_name,class,email,phone_number,father_name,username,password) VALUES (?,?,?,?,?,?,?,?,?)", // Corrected table name to 'user'
+      "INSERT INTO students (roll_number,first_name,last_name,class,email,phone_number,father_name,username,password) VALUES (?,?,?,?,?,?,?,?,?)", // Corrected table name to 'user'
       [
         rollNumber,
         firstName,
